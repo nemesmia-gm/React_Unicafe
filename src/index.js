@@ -10,7 +10,7 @@ const Button = ({text, onclick}) => {
 
 const Statistic = (props) => {
     return (
-        <div> {props.text} {props.count}</div>
+        <> <td>{props.text}</td><td>{props.count}</td></>
     )
 };
 
@@ -57,18 +57,20 @@ const App = () => {
             <Button text='neutral' onclick={() => badOrNeutralClicked(neutral, setNeutral)} />
             <Button text='bad' onclick={() => badOrNeutralClicked(bad, setBad)}/>
 
-           <h1>Statistic</h1>
+            <table>
+                <th><h1>Statistic</h1></th>
            {all>0
-               ? <div><Statistic text='good:' count={good}/>
-               <Statistic text='neutral:' count={neutral}/>
-               <Statistic text='bad:' count={bad}/>
-               <Statistic text='all:' count={all}/>
-               <Statistic text='average:' count={average}/>
-               <Statistic text='positive:' count={positivePercentage}/>
-               </div>
-               : <div> 'No feedback given. </div>
+               ?<>
+               <tr><Statistic text='good:' count={good}/> </tr>
+               <tr><Statistic text='neutral:' count={neutral}/> </tr>
+               <tr><Statistic text='bad:' count={bad}/> </tr>
+               <tr><Statistic text='all:' count={all}/> </tr>
+               <tr><Statistic text='average:' count={average}/> </tr>
+               <tr><Statistic text='positive:' count={positivePercentage}/> </tr>
+               </>
+               : <> <tr> 'No feedback given. </tr></>
            }
-
+            </table>
        </>
    )
 };

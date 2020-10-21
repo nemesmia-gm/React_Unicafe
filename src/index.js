@@ -1,79 +1,48 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
 
-const Button = ({text, onclick}) => {
+const ButtonAnecdotes = ({onclick}) => {
     return (
-        <button onClick={onclick}>{text}</button>
+            <button onClick={onclick}> next anecdote</button>
     )
 };
 
-const Statistic = (props) => {
+const App = (props) => {
+    const [selected, setSelected] = useState(0)
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    const generateRandomAnecdote = (anecdotes) => {
+        const max = anecdotes.length;
+
+        const index = getRandomInt(max);
+
+        return anecdotes[index];
+    };
+
     return (
-        <> <td>{props.text}</td><td>{props.count}</td></>
+        <>
+            <div>
+                {props.anecdotes[selected]}
+            </div>
+
+            <ButtonAnecdotes onclick={() =>generateRandomAnecdote(props.anecdotes)}/>
+        </>
     )
-};
+}
 
-const App = () => {
-    const [good, setGood] = useState(0);
-    const [neutral, setNeutral] = useState(0);
-    const [bad, setBad] = useState(0);
-    const [all, setAll] = useState(0);
-    const [average, setAverage] = useState(0);
-    const [positivePercentage, setPositivePercentage] = useState(0);
+const anecdotes = [
+    'If it hurts, do it more often',
+    'Adding manpower to a late software project makes it later!',
+    'The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.',
+    'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
+    'Premature optimization is the root of all evil.',
+    'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'
+]
 
-    const increaseCount = (value, setMethod) => {
-        return  setMethod(value + 1);
-    };
-
-    const badOrNeutralClicked = (value, setMethod) => {
-        increaseCount(value, setMethod, false);
-        calculateStatistics(false);
-    };
-
-    const goodClicked = () => {
-        increaseCount(good, setGood, true);
-        calculateStatistics(true);
-    };
-
-    const calculateStatistics = (goodClicked) => {
-        let allSum = good + bad + neutral + 1; //old sum incremented by one
-
-        setAll(allSum);
-        setAverage(allSum/3);
-
-        let newValueOfGood = good;
-        if(goodClicked)
-        {
-            newValueOfGood = good+1;
-        }
-        setPositivePercentage(newValueOfGood*100/allSum);
-    };
-
-    return (
-       <>
-            <h1> Give Feedback </h1>
-            <Button text='good' onclick={() => goodClicked()} />
-            <Button text='neutral' onclick={() => badOrNeutralClicked(neutral, setNeutral)} />
-            <Button text='bad' onclick={() => badOrNeutralClicked(bad, setBad)}/>
-
-            <table>
-                <th><h1>Statistic</h1></th>
-           {all>0
-               ?<>
-               <tr><Statistic text='good:' count={good}/> </tr>
-               <tr><Statistic text='neutral:' count={neutral}/> </tr>
-               <tr><Statistic text='bad:' count={bad}/> </tr>
-               <tr><Statistic text='all:' count={all}/> </tr>
-               <tr><Statistic text='average:' count={average}/> </tr>
-               <tr><Statistic text='positive:' count={positivePercentage}/> </tr>
-               </>
-               : <> <tr> 'No feedback given. </tr></>
-           }
-            </table>
-       </>
-   )
-};
-
-ReactDOM.render(<App/>, document.getElementById('root'));
-
+ReactDOM.render(
+    <App anecdotes={anecdotes} />,
+    document.getElementById('root')
+)

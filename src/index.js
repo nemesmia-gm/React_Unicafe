@@ -17,9 +17,7 @@ const App = (props) => {
     const generateRandomAnecdote = (anecdotes) => {
         const max = anecdotes.length;
 
-        const index = getRandomInt(max);
-
-        return anecdotes[index];
+        setSelected (getRandomInt(max));
     };
 
     return (

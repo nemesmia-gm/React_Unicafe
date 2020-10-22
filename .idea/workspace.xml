@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="228">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -128,18 +128,18 @@
       <updated>1603117674989</updated>
       <workItem from="1603117676190" duration="2871000" />
       <workItem from="1603301629521" duration="10644000" />
-      <workItem from="1603387566982" duration="4783000" />
+      <workItem from="1603387566982" duration="5690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18298000" />
+    <option name="totallyTimeSpent" value="19205000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="762" y="0" width="781" height="612" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.080634505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16397849" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -191,8 +191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="228">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

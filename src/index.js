@@ -1,35 +1,55 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
-const ButtonAnecdotes = ({onclick}) => {
+const Button = ({onclick, text}) => {
     return (
-            <button onClick={onclick}> next anecdote</button>
+            <button onClick={onclick}> {text}</button>
     )
 };
 
 const App = (props) => {
-    const [selected, setSelected] = useState(0)
-
+    const [selected, setSelected] = useState(0);
+    const [votes, setVotes] = useState([0,0,0,0,0,0]);
+   /* const [anecdoteVotes , setAnecdotes]= useState({
+        0: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0
+    });
+*/
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
 
     const generateRandomAnecdote = (anecdotes) => {
         const max = anecdotes.length;
-
         setSelected (getRandomInt(max));
+    };
+
+    const increaseVotes = (index) => {
+        let newArray = [...votes];
+        newArray[index] = votes[index]+1;
+
+        setVotes(newArray);
     };
 
     return (
         <>
             <div>
-                {props.anecdotes[selected]}
+                {anecdotes[selected]}
             </div>
 
-            <ButtonAnecdotes onclick={() =>generateRandomAnecdote(props.anecdotes)}/>
+            <div>
+                has {votes[selected]} votes
+            </div>
+
+            <Button onclick={() =>increaseVotes(selected) } text='vote'/>
+            <Button onclick={() =>generateRandomAnecdote(anecdotes)} text='next anecdotes'/>
         </>
-    )
-}
+    );
+};
 
 const anecdotes = [
     'If it hurts, do it more often',
@@ -38,7 +58,9 @@ const anecdotes = [
     'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
     'Premature optimization is the root of all evil.',
     'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'
-]
+];
+
+
 
 ReactDOM.render(
     <App anecdotes={anecdotes} />,

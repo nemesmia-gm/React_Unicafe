@@ -13,7 +13,15 @@ const App = () => {
             name: newName,
             id: persons.length + 1
         };
-        setPersons(persons.concat(person));
+
+        const found = persons.find((p) => p.name === newName);
+
+        if(found) {
+            alert(`${newName} already exists`);
+        }
+        else{
+            setPersons(persons.concat(person));
+        }
         setNewName(''); // clean up the field
 
     };

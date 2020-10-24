@@ -14,9 +14,7 @@ const Content = ({parts}) => {
                 <Part name={part.name} exercises={part.exercises}/>
                 )
             }
-            {
-                parts.reduce( (sum, p) => sum+p.exercises)
-            }
+           
             <Total total={sum} />
         </div>
     )

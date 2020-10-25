@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31b48d64-b113-4ab7-a2d9-b482a976e6d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Part2b-Countries/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part2b-Countries/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="230">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="18" selection-end-column="33" />
               <folding>
                 <element signature="e#1#50#0" expanded="true" />
               </folding>
@@ -42,11 +42,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="703">
+              <caret line="49" column="80" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,6 +69,7 @@
       <find>aler</find>
       <find>include</find>
       <find>alert</find>
+      <find>$</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,10 +105,10 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/App.js" />
         <option value="$PROJECT_DIR$/src/Part2b-Countries/FetchCountries.js" />
-        <option value="$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js" />
         <option value="$PROJECT_DIR$/src/Part2b-Countries/FindCountries.js" />
         <option value="$PROJECT_DIR$/src/Part2b-Countries/RenderCountries.js" />
         <option value="$PROJECT_DIR$/src/Part2b-Countries/App.js" />
+        <option value="$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js" />
       </list>
     </option>
   </component>
@@ -187,12 +191,12 @@
       <workItem from="1603447524233" duration="806000" />
       <workItem from="1603525111930" duration="5215000" />
       <workItem from="1603530414995" duration="11130000" />
-      <workItem from="1603606295733" duration="17050000" />
+      <workItem from="1603606295733" duration="20380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55663000" />
+    <option name="totallyTimeSpent" value="58993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,19 +413,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js">
+    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="230">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="18" selection-end-column="33" />
+          <folding>
+            <element signature="e#1#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/App.js">
+    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="703">
+          <caret line="49" column="80" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
           <folding>
-            <element signature="e#1#50#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

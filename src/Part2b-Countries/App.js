@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from "react";
-import RenderCountries from "./RenderCountries";
 import axios from 'axios';
+import CountryDetails from "./CountryDetails";
 
 const App = () => {
     const url = 'https://restcountries.eu/rest/v2/all';
@@ -30,15 +30,29 @@ const App = () => {
         setFilteredCountries(filtered);
     }
 
+    const showCountryDetail = (country) => {
+        setFilter(country.name)
+    }
+
     return (
         <div>
             <div>find countries </div>
             <input value={filter} onChange={handleFilterChange}/>
             {
-                (filterCount > 10)
-                ? <div>Too many matches {filterCount} </div>
-                : <RenderCountries countries={filteredCountries}
-                    />
+                (filterCount === 1)
+                    ? <CountryDetails country={filteredCountries[0]}/>
+                    : (filterCount > 10)
+                            ? <div>Too many matches {filterCount} </div>
+                            : <div>
+                                {
+                                    filteredCountries.map((country) =>
+                                        <>
+                                        <div key={country.name}> {country.name} </div>
+                                        <button onClick={() => showCountryDetail(country)}>show</button>
+                                        </>
+                                    )
+                                }
+                                </div>
             }
         </div>
     )

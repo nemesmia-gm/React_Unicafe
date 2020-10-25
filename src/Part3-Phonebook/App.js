@@ -53,7 +53,7 @@ const App = () => {
     return (
         <div>
             {
-                useEffect(hook, [])
+               useEffect(hook, [])
             }
             <h2>Phonebook</h2>
             <SearchFilter filter={filterByName} handleFilterChange={handleFilterChange}/>

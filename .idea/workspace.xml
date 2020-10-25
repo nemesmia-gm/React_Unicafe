@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31b48d64-b113-4ab7-a2d9-b482a976e6d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part2b-Countries/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Part2b-Countries/RenderCountries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/AddNewPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/AddNewPerson.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/Phonebook.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/searchFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/searchFilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,23 +23,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/App.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="322">
+              <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/RenderCountries.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.json">
+        <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="253">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+              <folding>
+                <element signature="e#1#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,20 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Phonebook.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="46">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -82,6 +89,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>index.</find>
+      <find>aler</find>
+      <find>include</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,9 +119,18 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js" />
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/db.json" />
+        <option value="$PROJECT_DIR$/src/Countries/CountryDetails.js" />
+        <option value="$PROJECT_DIR$/src/Countries/FindCountries.js" />
+        <option value="$PROJECT_DIR$/src/Countries/RenderCountries.js" />
+        <option value="$PROJECT_DIR$/src/Countries/App.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/App.js" />
+        <option value="$PROJECT_DIR$/src/Part2b-Countries/FetchCountries.js" />
+        <option value="$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js" />
+        <option value="$PROJECT_DIR$/src/Part2b-Countries/RenderCountries.js" />
+        <option value="$PROJECT_DIR$/src/Part2b-Countries/FindCountries.js" />
+        <option value="$PROJECT_DIR$/src/Part2b-Countries/App.js" />
       </list>
     </option>
   </component>
@@ -142,7 +161,7 @@
               <item name="unicafe" type="b2602c69:ProjectViewProjectNode" />
               <item name="unicafe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Part3-Phonebook" type="462c0819:PsiDirectoryNode" />
+              <item name="Part2b-Countries" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -194,12 +213,12 @@
       <workItem from="1603447524233" duration="806000" />
       <workItem from="1603525111930" duration="5215000" />
       <workItem from="1603530414995" duration="11130000" />
-      <workItem from="1603606295733" duration="3910000" />
+      <workItem from="1603606295733" duration="9539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42523000" />
+    <option name="totallyTimeSpent" value="48152000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -214,12 +233,12 @@
     <frame x="3193" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49940264" visible="true" weight="0.23009554" />
-      <window_info id="Structure" order="1" sideWeight="0.50059736" side_tool="true" weight="0.23009554" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.23009554" />
+      <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.23009554" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50059736" side_tool="true" weight="0.23009554" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32932693" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -334,16 +353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -365,16 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -382,12 +381,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="1035">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/FetchCountries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/FindCountries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/CountryDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="62" lean-forward="true" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/RenderCountries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Part2b-Countries/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#1#50#0" expanded="true" />
           </folding>
         </state>
       </provider>

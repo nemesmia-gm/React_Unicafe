@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import SearchFilter from "./searchFilter";
+import AddNewPerson from "./AddNewPerson";
+import RenderPersons from "./RenderPersons";
+import axios from 'axios';
 
 const App = () => {
-    const [ persons, setPersons ] = useState([
-        {id: 0, name: 'Arto Hellas', telefon: '0715225656' }
-    ]);
+    const [ persons, setPersons ] = useState([]);
     const [ newName, setNewName ] = useState('');
     const [ newTelefon, setNewTelefon ] = useState(0);
-    const [ filterByName, setFilterByName ] = useState('arto Hellas');
-
+    const [ filterByName, setFilterByName ] = useState('');
 
     const addPerson = (event) => {
         event.preventDefault(); //prevent page reload which is the default behaviour
@@ -42,32 +43,26 @@ const App = () => {
         setFilterByName(event.target.value)
     };
 
+    const hook = () => {
+        axios.get('http://localhost:3001/persons')
+            .then(response => {
+                setPersons(response.data)
+            });
+    };
+
     return (
         <div>
-            <h2>Phonebook</h2>
-            <div>
-                filter shown with: <input value={filterByName} onChange={handleFilterChange}/>
-            </div>
-
-            <form onSubmit={addPerson}>
-                <div>
-                    Name: <input value={newName} onChange={handleNameChange}/>
-                </div>
-                <div>
-                    Telefon: <input value={newTelefon} onChange={handleTelefonChange}/>
-                </div>
-                <div>
-                    <button type="submit" >add new person</button>
-                </div>
-            </form>
-
-            <h2>Numbers</h2>
             {
-                    persons.filter( (p) => p.name.toLowerCase().includes(filterByName.toLowerCase()))
-                    .map( (person) =>
-                    <div key={person.id}>{person.name} {person.telefon} </div>
-                )
+                useEffect(hook, [])
             }
+            <h2>Phonebook</h2>
+            <SearchFilter filter={filterByName} handleFilterChange={handleFilterChange}/>
+            <AddNewPerson newName={newName}
+                          newTelefon={newTelefon}
+                          handleNameChange={handleNameChange}
+                          handleTelefonChange={handleTelefonChange}
+                          handleAddPerson={addPerson}/>
+            <RenderPersons persons={persons} filterByName={filterByName}/>
         </div>
     )
 }

@@ -7,8 +7,6 @@ const App = () => {
     const url = 'https://restcountries.eu/rest/v2/all';
     const [countries, setCountries] = useState([]);
     const [filter, setFilter] = useState('');
-    const [filterCount, setFilterCount] = useState(0);
-    const [filteredCountries, setFilteredCountries] = useState(countries);
 
     const fetchCountries = () => {
         axios
@@ -20,24 +18,23 @@ const App = () => {
 
     useEffect(fetchCountries, [])
 
+    let filteredCountries =
+        countries.filter( (country) => country.name.toLowerCase().includes(filter.toLowerCase()));
+
+    let filterCount = filteredCountries.length;
+
     const handleFilterChange = (event) =>{
         setFilter(event.target.value)
-
-        let filtered = countries
-            .filter( (country) => country.name.toLowerCase().includes(event.target.value.toLowerCase()));
-
-        setFilterCount(filtered.length);
-        setFilteredCountries(filtered);
     }
 
     const showCountryDetail = (country) => {
-        setFilter(country.name)
+        setFilter(country.name);
     }
 
     return (
         <div>
-            <div>find countries </div>
-            <input value={filter} onChange={handleFilterChange}/>
+            search countries:
+            <input value={filter} onChange={handleFilterChange} />
             {
                 (filterCount === 1)
                     ? <CountryDetails country={filteredCountries[0]}/>
@@ -46,10 +43,10 @@ const App = () => {
                             : <div>
                                 {
                                     filteredCountries.map((country) =>
-                                        <>
-                                        <div key={country.name}> {country.name} </div>
-                                        <button onClick={() => showCountryDetail(country)}>show</button>
-                                        </>
+                                        <div key={country.name}>
+                                            {country.name}
+                                            <button onClick={() => showCountryDetail(country)}>show</button>
+                                        </div>
                                     )
                                 }
                                 </div>

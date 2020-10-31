@@ -44,12 +44,24 @@ const App = () => {
         setFilterByName(event.target.value)
     };
 
+    const deleteEntry = (id) => {
+        const responseData = personService.deletePerson(id)
+            .then( () => {
+                personService
+                    .getAll()
+                    .then( loadedPersons => {
+                        setPersons(loadedPersons)
+                    })
+            })
+        console.log(`Response from delete is: ${responseData}`);
+    };
+
     useEffect( () => {
         personService
             .getAll()
             .then( loadedPersons => {
-                    setPersons(loadedPersons)
-                })
+                setPersons(loadedPersons)
+            })
         },[]);
 
     return (
@@ -61,7 +73,7 @@ const App = () => {
                           handleNameChange={handleNameChange}
                           handleTelefonChange={handleTelefonChange}
                           handleAddPerson={addPerson}/>
-            <RenderPersons persons={persons} filterByName={filterByName}/>
+            <RenderPersons persons={persons} filterByName={filterByName} onclick={deleteEntry}/>
         </div>
     )
 }

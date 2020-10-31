@@ -27,13 +27,8 @@
     },
     {
       "id": 6,
-      "name": "mia",
-      "telefon": "123 456"
-    },
-    {
-      "id": 7,
-      "name": "gabi",
-      "telefon": "4556"
+      "name": "mia1",
+      "telefon": "111"
     }
   ]
 }

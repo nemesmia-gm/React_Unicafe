@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31b48d64-b113-4ab7-a2d9-b482a976e6d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Part3-Phonebook/services/persons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Part3-Phonebook/services/persons.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,25 +19,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+            <state relative-caret-position="948">
+              <caret line="78" column="93" selection-start-line="78" selection-start-column="82" selection-end-line="78" selection-end-column="93" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,6 +36,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
               <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,9 +118,9 @@
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/Services/Persons.js" />
         <option value="$PROJECT_DIR$/db.json" />
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js" />
-        <option value="$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js" />
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/services/persons.js" />
         <option value="$PROJECT_DIR$/src/Part3-Phonebook/App.js" />
+        <option value="$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js" />
       </list>
     </option>
   </component>
@@ -217,12 +214,12 @@
       <workItem from="1603530414995" duration="11130000" />
       <workItem from="1603606295733" duration="21331000" />
       <workItem from="1603946432474" duration="599000" />
-      <workItem from="1604138251125" duration="6780000" />
+      <workItem from="1604138251125" duration="7352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67323000" />
+    <option name="totallyTimeSpent" value="67895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,13 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/services/persons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -442,22 +432,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js">
+    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="948">
+          <caret line="78" column="93" selection-start-line="78" selection-start-column="82" selection-end-line="78" selection-end-column="93" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/App.js">
+    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPerson.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+        <state relative-caret-position="161">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Part3-Phonebook/RenderPersons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

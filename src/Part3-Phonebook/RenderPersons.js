@@ -9,7 +9,7 @@ const RenderPersons = ({persons, filterByName, onclick}) => {
         {
             persons.filter( (p) => p.name.toLowerCase().includes(filterByName.toLowerCase()))
                 .map( (person) =>
-                    <RenderPerson key={person.id} person={person} onclick={ () => {onclick(person.id) }}/>
+                    <RenderPerson key={person.id} person={person} onclick={ () => {onclick(person) }}/>
                 )
         }
         </div>

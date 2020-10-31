@@ -44,8 +44,11 @@ const App = () => {
         setFilterByName(event.target.value)
     };
 
-    const deleteEntry = (id) => {
-        const responseData = personService.deletePerson(id)
+    const deleteEntry = (person) => {
+        if( !window.confirm(`Delete ${person.name}?`)) {
+           return;
+        }
+        const responseData = personService.deletePerson(person.id)
             .then( () => {
                 personService
                     .getAll()

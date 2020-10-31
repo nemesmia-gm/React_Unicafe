@@ -1,5 +1,5 @@
 {
-  "persons":[
+  "persons": [
     {
       "name": "Maz Hellas",
       "number": "040-123456",
@@ -19,6 +19,21 @@
       "name": "Mary Poppendieck",
       "number": "39-23-6423122",
       "id": 4
+    },
+    {
+      "name": "Dana Duma",
+      "number": "123-456",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "mia",
+      "telefon": "123 456"
+    },
+    {
+      "id": 7,
+      "name": "gabi",
+      "telefon": "4556"
     }
   ]
 }

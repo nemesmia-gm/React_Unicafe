@@ -29,6 +29,11 @@
       "id": 6,
       "name": "mia1",
       "telefon": "111"
+    },
+    {
+      "id": 7,
+      "name": "mia",
+      "telefon": "555"
     }
   ]
 }

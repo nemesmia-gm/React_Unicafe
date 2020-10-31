@@ -10,6 +10,18 @@ const App = () => {
     const [ newTelefon, setNewTelefon ] = useState(0);
     const [ filterByName, setFilterByName ] = useState('');
 
+    const handleNameChange = (event) => {
+        setNewName(event.target.value)
+    };
+
+    const handleTelefonChange = (event) => {
+        setNewTelefon(event.target.value)
+    };
+
+    const handleFilterChange = (event) => {
+        setFilterByName(event.target.value)
+    };
+
     const addPerson = (event) => {
         event.preventDefault(); //prevent page reload which is the default behaviour
 
@@ -22,26 +34,21 @@ const App = () => {
         const found = persons.find((p) => p.name === newName);
 
         if(found) {
-            alert(`${newName} already exists`);
-        }
+            if( window.confirm(`${newName} is already added to phonebook. Replace the old number with the new one? `)){
+                const changedPerson = { ...found, telefon: newTelefon };
+                personService
+                    .update(found.id, changedPerson)
+                    .then(returnedPerson => {
+                        setPersons(persons.map(p => p.id !== found.id ? p : returnedPerson))
+                    })
+                }
+            }
         else {
             personService.create(person);
             setPersons(persons.concat(person));
         }
         setNewName(''); // clean up the field
         setNewTelefon('');
-    };
-
-    const handleNameChange = (event) => {
-        setNewName(event.target.value)
-    };
-
-    const handleTelefonChange = (event) => {
-        setNewTelefon(event.target.value)
-    };
-
-    const handleFilterChange = (event) => {
-        setFilterByName(event.target.value)
     };
 
     const deleteEntry = (person) => {

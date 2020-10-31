@@ -26,14 +26,14 @@
       "id": 5
     },
     {
-      "id": 6,
-      "name": "mia1",
-      "telefon": "111"
-    },
-    {
       "id": 7,
       "name": "mia",
-      "telefon": "555"
+      "telefon": "8888"
+    },
+    {
+      "id": 9,
+      "name": "mia4",
+      "telefon": ""
     }
   ]
 }

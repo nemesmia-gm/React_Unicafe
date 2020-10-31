@@ -2,10 +2,10 @@ import React from "react";
 
 const RenderPerson = ({person, onclick}) => {
     return (
-        <div>
+        <li className="person">
             {person.name} {person.telefon}
             <button onClick={onclick}>delete</button>
-        </div>
+        </li>
     )
 };
 

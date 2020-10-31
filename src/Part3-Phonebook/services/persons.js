@@ -18,9 +18,6 @@ const deletePerson = (id) => {
     return axios
         .delete(`${baseUrl}/${id}`)
         .then( response => response.data)
-        .catch( error => {
-            console.log(`Error: ${error}`)
-        })
 };
 
 const update = (id, person) => {

@@ -3,12 +3,17 @@ import SearchFilter from "./searchFilter";
 import AddNewPerson from "./AddNewPerson";
 import RenderPersons from "./RenderPersons";
 import personService from './services/persons'
+import Notification from "./Notification";
 
 const App = () => {
     const [ persons, setPersons ] = useState([]);
     const [ newName, setNewName ] = useState('');
     const [ newTelefon, setNewTelefon ] = useState(0);
     const [ filterByName, setFilterByName ] = useState('');
+    const [ notification, setNotification ] = useState({
+        message: null,
+        color: 'green'
+    });
 
     const handleNameChange = (event) => {
         setNewName(event.target.value)
@@ -20,6 +25,20 @@ const App = () => {
 
     const handleFilterChange = (event) => {
         setFilterByName(event.target.value)
+    };
+
+    const showNotification = (newNotification) =>{
+        setNotification( {
+            message: newNotification.message,
+            color: newNotification.color
+        });
+
+        setTimeout(() => {
+            setNotification( {
+                message:null,
+                color:null
+            })
+        }, 5000)
     };
 
     const addPerson = (event) => {
@@ -40,12 +59,16 @@ const App = () => {
                     .update(found.id, changedPerson)
                     .then(returnedPerson => {
                         setPersons(persons.map(p => p.id !== found.id ? p : returnedPerson))
-                    })
-                }
+                    });
+
+                showNotification({ message:'Person changed', color:'blue'});
+               }
             }
         else {
             personService.create(person);
             setPersons(persons.concat(person));
+
+            showNotification({ message:'Person added', color:'green'});
         }
         setNewName(''); // clean up the field
         setNewTelefon('');
@@ -62,8 +85,11 @@ const App = () => {
                     .then( loadedPersons => {
                         setPersons(loadedPersons)
                     })
+                    .catch( error => {
+                        showNotification({ message:'`Information on ${person.name} has already been removed from server`)', color:'red'});
+                    })
             })
-        console.log(`Response from delete is: ${responseData}`);
+       // setNotificationMessage('Person deleted.');
     };
 
     useEffect( () => {
@@ -77,6 +103,7 @@ const App = () => {
     return (
         <div>
             <h2>Phonebook</h2>
+            <Notification message={notification.message} color={notification.color} />
             <SearchFilter filter={filterByName} handleFilterChange={handleFilterChange}/>
             <AddNewPerson newName={newName}
                           newTelefon={newTelefon}

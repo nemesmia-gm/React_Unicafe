@@ -12,7 +12,23 @@ import { Redirect } from "react-router-dom"
 import Login from "./Login";
 import Container from '@material-ui/core/Container'
 import {AppBar, Toolbar, IconButton, Button} from '@material-ui/core'
+import styled from 'styled-components'
 
+const Page = styled.div`
+    padding: 1em;
+    background: papayawhip;
+    `
+
+const Navigation = styled.div`
+      background: BurlyWood;
+      padding: 1em;
+    `
+
+const Footer = styled.div`
+      background: Chocolate;
+      padding: 1em;
+      margin-top: 1em;
+    `
 
 const App = () => {
     const notes = [
@@ -49,29 +65,65 @@ const App = () => {
     };
 
     return (
-        <Container>
-            <div>
-                    <div>
-                        <AppBar position="static">
-                            <Toolbar>
-                                <Button color="inherit" component={Link} to="/">
-                                    home
-                                </Button>
-                                <Button color="inherit" component={Link} to="/notes">
-                                    notes
-                                </Button>
-                                <Button color="inherit" component={Link} to="/users">
-                                    users
-                                </Button>
-                                {user
-                                    ? <em>{user} logged in</em>
-                                    : <Button color="inherit" component={Link} to="/login">
-                                        login
+        <div>
+            <Container>
+                <div>
+                        <div>
+                            <AppBar position="static">
+                                <Toolbar>
+                                    <Button color="inherit" component={Link} to="/">
+                                        home
                                     </Button>
-                                }
-                            </Toolbar>
-                        </AppBar>
+                                    <Button color="inherit" component={Link} to="/notes">
+                                        notes
+                                    </Button>
+                                    <Button color="inherit" component={Link} to="/users">
+                                        users
+                                    </Button>
+                                    {user
+                                        ? <em>{user} logged in</em>
+                                        : <Button color="inherit" component={Link} to="/login">
+                                            login
+                                        </Button>
+                                    }
+                                </Toolbar>
+                            </AppBar>
+                        </div>
+                        <Switch>
+                            <Route path="/notes/:id">
+                                <Note note={note} />
+                            </Route>
+                            <Route path="/notes">
+                                <Notes notes={notes} />
+                            </Route>
+                            <Route path="/users">
+                                {user ? <Users /> : <Redirect to="/login" />}
+                            </Route>
+                            <Route path="/login">
+                                <Login onLogin={login} />
+                            </Route>
+                            <Route path="/">
+                                <Home />
+                            </Route>
+                        </Switch>
+                    <div>
+                        <br />
+                        <em>Note app, Department of Computer Science 2020</em>
                     </div>
+                </div>
+            </Container>
+            <div>
+                <Page>
+                    <Navigation>
+                        <Link style={padding} to="/">home</Link>
+                        <Link style={padding} to="/notes">notes</Link>
+                        <Link style={padding} to="/users">users</Link>
+                        {user
+                            ? <em>{user} logged in</em>
+                            : <Link style={padding} to="/login">login</Link>
+                        }
+                    </Navigation>
+
                     <Switch>
                         <Route path="/notes/:id">
                             <Note note={note} />
@@ -89,12 +141,13 @@ const App = () => {
                             <Home />
                         </Route>
                     </Switch>
-                <div>
-                    <br />
-                    <em>Note app, Department of Computer Science 2020</em>
-                </div>
+
+                    <Footer>
+                        <em>Note app, Department of Computer Science 2020</em>
+                    </Footer>
+                </Page>
             </div>
-        </Container>
+        </div>
     )
 };
 

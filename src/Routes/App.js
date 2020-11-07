@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import {
     BrowserRouter as Router,
+    useRouteMatch,
     Switch, Route, Link
 } from "react-router-dom"
 import Notes from "./Notes";
 import Users from "./Users";
 import Home from "./Home";
 import Note from "./Note";
+import { Redirect } from "react-router-dom"
+import Login from "./Login";
 
 const App = () => {
     const notes = [
@@ -25,38 +28,56 @@ const App = () => {
             important: false,
             id: 3
         }
-    ]
+    ];
+
+    const [user, setUser] = useState(null);
+
+    const login = (user) => {
+        setUser(user)
+    };
+
+    const match = useRouteMatch('/notes/:id');
+    const note = match
+        ? notes.find(note => note.id === Number(match.params.id))
+        : null;
+
     const padding = {
         padding: 5
     };
 
     return (
-        <Router>
+        <div>
+                <div>
+                    <Link style={padding} to="/">home</Link>
+                    <Link style={padding} to="/notes">notes</Link>
+                    <Link style={padding} to="/users">users</Link>
+                    {user
+                        ? <em>{user} logged in</em>
+                        : <Link style={padding} to="/login">login</Link>
+                    }
+                </div>
+                <Switch>
+                    <Route path="/notes/:id">
+                        <Note note={note} />
+                    </Route>
+                    <Route path="/notes">
+                        <Notes notes={notes} />
+                    </Route>
+                    <Route path="/users">
+                        {user ? <Users /> : <Redirect to="/login" />}
+                    </Route>
+                    <Route path="/login">
+                        <Login onLogin={login} />
+                    </Route>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch>
             <div>
-                <Link style={padding} to="/">home</Link>
-                <Link style={padding} to="/notes">notes</Link>
-                <Link style={padding} to="/users">users</Link>
+                <br />
+                <em>Note app, Department of Computer Science 2020</em>
             </div>
-
-            <Switch>
-                <Route path="/notes/:id">
-                    <Note notes={notes} />
-                </Route>
-                <Route path="/notes">
-                    <Notes notes={notes}/>
-                </Route>
-                <Route path="/users">
-                    <Users />
-                </Route>
-                <Route path="/">
-                    <Home />
-                </Route>
-            </Switch>
-
-            <div>
-                <i>Note app, Department of Computer Science 2020</i>
-            </div>
-        </Router>
+        </div>
     )
 };
 

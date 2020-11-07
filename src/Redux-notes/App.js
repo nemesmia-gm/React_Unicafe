@@ -1,6 +1,7 @@
 import React from 'react'
 import NewNote from "./NewNote";
 import Notes from "./Notes";
+import VisibilityFilter from "./VisibilityFilter";
 
 /*
 * The useDispatch-hook provides any React component access to the dispatch-function of the redux-store defined in
@@ -11,6 +12,7 @@ const App = () => {
     return(
         <div>
             <NewNote />
+            <VisibilityFilter />
             <Notes />
         </div>
     )

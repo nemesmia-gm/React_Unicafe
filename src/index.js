@@ -5,16 +5,35 @@ import React from "react";
 
 import './index.css'
 
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+import {combineReducers, createStore} from 'redux'
+import noteReducer, {createNote} from './Redux-notes/reducers/noteReducer'
+import filterReducer, {filterChange} from "./Redux-notes/reducers/filterReducer";
+import Provider from "react-redux/es/components/Provider";
 import App from "./Redux-notes/App";
-import noteReducer from './Redux-notes/noteReducer'
+import {composeWithDevTools} from "redux-devtools-extension";
 
-const store = createStore(noteReducer);
+const reducer = combineReducers({
+    notes: noteReducer,
+    filter: filterReducer
+});
+
+const store = createStore(
+    reducer,
+    composeWithDevTools()
+);
+
+console.log(store.getState());
+
+store.subscribe(() => console.log(store.getState()));
+
+store.dispatch(filterChange('IMPORTANT'));
+store.dispatch(createNote('combineReducers forms one reducer from many simple reducers'));
 
 ReactDOM.render(
     <Provider store={store}>
-    <App />
-    </Provider>, document.getElementById('root')
+        <App />
+    </Provider>,
+    document.getElementById('root')
 );
 
+export default store

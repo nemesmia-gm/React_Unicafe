@@ -1,12 +1,19 @@
 import React from 'react'
-import NoteReducer from "./noteReducer";
+import NewNote from "./NewNote";
+import Notes from "./Notes";
 
+/*
+* The useDispatch-hook provides any React component access to the dispatch-function of the redux-store defined in
+* index.js. This allows all components to make changes to the state of the redux-store.
+* The component can access the notes stored in the store with the useSelector-hook of the react-redux library.
+* */
 const App = () => {
     return(
         <div>
-          <NoteReducer/>
+            <NewNote />
+            <Notes />
         </div>
     )
-}
+};
 
 export default App;

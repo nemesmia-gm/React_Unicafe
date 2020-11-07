@@ -1,39 +1,49 @@
 {
-  "persons": [
+  "notes": [
     {
-      "name": "Maz Hellas",
-      "number": "040-123456",
+      "content": "the app state is in redux store",
+      "important": true,
       "id": 1
     },
     {
-      "name": "Ada Lovelace",
-      "number": "39-44-5323523",
+      "content": "state changes are made with actions",
+      "important": false,
       "id": 2
     },
     {
-      "name": "Dan Abramov",
-      "number": "12-43-234345",
+      "content": "test",
+      "important": false,
       "id": 3
     },
     {
-      "name": "Mary Poppendieck",
-      "number": "39-23-6423122",
+      "content": "fgdf",
+      "important": false,
       "id": 4
     },
     {
-      "name": "Dana Duma",
-      "number": "123-456",
+      "content": "4555",
+      "important": false,
       "id": 5
     },
     {
-      "id": 7,
-      "name": "mia",
-      "telefon": "8888"
+      "content": "test",
+      "important": false,
+      "id": 6
     },
     {
-      "id": 9,
-      "name": "mia4",
-      "telefon": ""
+      "content": "111",
+      "important": false,
+      "id": 7
+    },
+    {
+      "content": "",
+      "important": false,
+      "id": 8
+    },
+    {
+      "content": "rr",
+      "important": false,
+      "id": 9
     }
   ]
 }

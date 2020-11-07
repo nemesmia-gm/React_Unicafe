@@ -5,11 +5,15 @@ const initialState = [
     { content: 'state of store can contain any data', important: false, id: 2,  },
 ];
 
-const noteReducer = (state = initialState, action) => {
-    console.log('ACTION: ', action)
+const noteReducer = (state = [], action) => {
+    console.log('ACTION: ', action);
     switch(action.type) {
         case 'NEW_NOTE':
             return state.concat(action.data);
+
+        case 'INIT_NOTES':
+            return action.data;
+
         case 'TOGGLE_IMPORTANCE': {
             const id = action.data.id;
             const noteToChange = state.find(n => n.id === id);
@@ -25,19 +29,16 @@ const noteReducer = (state = initialState, action) => {
             return state
     }
 };
-
+/*
 const generateId = () =>
     Number((Math.random() * 1000000).toFixed(0));
+*/
 
-
-export const createNote = (content) => {
+// Because the backend generates ids for the notes, we'll change the action creator createNote
+export const createNote = (data) => {
     return {
         type: 'NEW_NOTE',
-        data: {
-            content,
-            important: false,
-            id: generateId()
-        }
+        data,
     }
 };
 
@@ -47,6 +48,13 @@ export const toggleImportanceOf = (id) => {
         data: { id }
     }
 };
+
+export const initializeNotes = (notes) => {
+    return {
+        type: 'INIT_NOTES',
+        data: notes,
+    }
+}
 
 export default noteReducer
 

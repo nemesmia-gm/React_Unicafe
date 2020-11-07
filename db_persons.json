@@ -1,0 +1,39 @@
+{
+  "persons": [
+    {
+      "name": "Maz Hellas",
+      "number": "040-123456",
+      "id": 1
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": 2
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": 3
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": 4
+    },
+    {
+      "name": "Dana Duma",
+      "number": "123-456",
+      "id": 5
+    },
+    {
+      "id": 7,
+      "name": "mia",
+      "telefon": "8888"
+    },
+    {
+      "id": 9,
+      "name": "mia4",
+      "telefon": ""
+    }
+  ]
+}

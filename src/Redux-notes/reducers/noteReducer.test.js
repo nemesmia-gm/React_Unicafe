@@ -1,4 +1,4 @@
-import noteReducer from './reducers/noteReducer'
+import noteReducer from './noteReducer'
 import '@testing-library/jest-dom/extend-expect'
 import deepFreeze from 'deep-freeze'
 /*

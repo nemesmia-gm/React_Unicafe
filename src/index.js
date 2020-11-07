@@ -10,17 +10,7 @@ import noteReducer from './Redux-notes/reducers/noteReducer'
 import filterReducer from "./Redux-notes/reducers/filterReducer";
 import Provider from "react-redux/es/components/Provider";
 import App from "./Redux-notes/App";
-import {composeWithDevTools} from "redux-devtools-extension";
-
-const reducer = combineReducers({
-    notes: noteReducer,
-    filter: filterReducer
-});
-
-const store = createStore(
-    reducer,
-    composeWithDevTools()
-);
+import store from "./Redux-notes/Store";
 
 ReactDOM.render(
     <Provider store={store}>

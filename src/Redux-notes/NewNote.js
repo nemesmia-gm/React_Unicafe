@@ -10,8 +10,7 @@ const NewNote = (props) => {
         event.preventDefault();
         const content = event.target.note.value; //Because the field has a name, we can access the content via the event object event.target.note.value.
         event.target.note.value = '';
-        const newNote = await noteService.createNew(content)
-        dispatch(createNote(newNote))
+        dispatch(createNote(content))
     };
 
     return (

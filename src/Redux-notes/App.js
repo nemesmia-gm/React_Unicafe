@@ -3,7 +3,6 @@ import NewNote from "./NewNote";
 import Notes from "./Notes";
 import VisibilityFilter from "./VisibilityFilter";
 import {useDispatch} from "react-redux";
-import noteService from "./services/notes";
 import {initializeNotes} from "./reducers/noteReducer";
 
 /*
@@ -11,12 +10,12 @@ import {initializeNotes} from "./reducers/noteReducer";
 * index.js. This allows all components to make changes to the state of the redux-store.
 * The component can access the notes stored in the store with the useSelector-hook of the react-redux library.
 * */
+
 const App = () => {
     const dispatch = useDispatch();
-    useEffect(() => {
-        noteService
-            .getAll().then(notes => dispatch(initializeNotes(notes)))
+    useEffect(() => {dispatch(initializeNotes())
     }, [dispatch]);
+
     return(
         <div>
             <NewNote />
